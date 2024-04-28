@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="cc" class="spring_02_beans.CreditCardPayment"/>
+    <bean id="dc" class="spring_02_beans.DebitCardPayment"/>
+    <bean id="pp" class="spring_02_beans.PaymentProcessor">
+    <property name="payment" ref="cc"/>
+    </bean>
+
+</beans>
